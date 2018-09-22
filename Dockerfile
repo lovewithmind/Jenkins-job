@@ -4,6 +4,6 @@ ADD . /jenkins-job/
 
 RUN chmod 777 /jenkins-job/scripts/initjenkins.sh && /jenkins-job/scripts/initjenkins.sh
 
-CMD java -jar /jenkins-job/jenkinswar/jenkins.war -Djenkins.install.runSetupWizard=false
+CMD java -Djenkins.install.runSetupWizard=false -jar /jenkins-job/jenkinswar/jenkins.war
 
 EXPOSE 8080
