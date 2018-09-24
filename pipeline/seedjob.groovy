@@ -1,6 +1,5 @@
-
-job('example') {
+job('example-1') {
     steps {
-        shell('echo START')
+        shell('echo Hello World!')
     }
 }
