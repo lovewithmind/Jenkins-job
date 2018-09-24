@@ -1,7 +1,7 @@
 import javaposse.jobdsl.dsl.DslScriptLoader
 import javaposse.jobdsl.plugin.JenkinsJobManagement
 
-def jobDslScript = new File('/root/.jenkins/jobs/seedjob.groovy')
+def jobDslScript = new File('/var/jenkins_home/jobs/seedjob.groovy')
 def workspace = new File('.')
 
 def jobManagement = new JenkinsJobManagement(System.out, [:], workspace)
