@@ -1,5 +1,14 @@
-job('example-1') {
-    steps {
-        shell('echo Hello World!')
+job('seed-job') {
+    scm {
+        git {
+            remote {
+                credentials('default-creds')
+                name('pipeline-definitions')
+                url('PIPELINE_DEFINITIONS')
+            }
+        }
+    }
+    steps{
+        shell("/jenkins-job/scripts/run-jjb.sh")
     }
 }

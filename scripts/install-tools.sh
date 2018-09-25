@@ -7,5 +7,10 @@ install_maven(){
     yum install -y apache-maven
 }
 
+install_git(){
+    yum update -y nss curl libcurl
+    yes | yum install git
+}
 
 install_maven
+install_git
